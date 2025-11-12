@@ -73,7 +73,8 @@ export default function App() {
   return (
     <View style={styles.container}>
 
-      <View style={styles.campoBusca}>
+      <View style={styles.campoBotao}>
+        <View style={styles.campoBusca}>
         <TextInput
           style={styles.input}
           placeholder="Pesquise um local"
@@ -89,8 +90,9 @@ export default function App() {
       </View>
 
       <Pressable style={styles.buttonReset} onPress={resetMap}>
-        <Text style={styles.buttonText}>Resetar mapa</Text>
+        <Text style={styles.buttonText}>Resetar Mapa</Text>
       </Pressable>
+      </View>
 
       <View style={styles.mapContainer}>
         <MapView
@@ -113,7 +115,7 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center', 
     alignItems: 'center',   
-    backgroundColor: '#f0e7d5'  
+    backgroundColor: '#f0e7d5',
   },
 
   mapContainer: {
@@ -122,7 +124,7 @@ const styles = StyleSheet.create({
     borderWidth: 5,          
     borderColor: '#212842', 
     borderRadius: 50,
-    overflow: 'hidden',     
+    overflow: 'hidden',
   },
 
   map: {
@@ -130,21 +132,21 @@ const styles = StyleSheet.create({
   },
 
   input: {
-    width: '70%',
-    height: '30%',
+    width: 250,
+    height: 50,
     borderWidth: 2,
     borderColor: '#212842', 
     borderRadius: 50,       
     overflow: 'hidden',
-    marginBottom: 70,
+    marginBottom: 50,
   },
 
   buttonBusca: {
     backgroundColor: '#212842',
     borderRadius: 5,
     overflow: 'hidden',
-    width: '20%',
-    height: '30%',
+    width: 70,
+    height: 50,
     justifyContent: 'center',
     alignItems: 'center',
   },
@@ -163,10 +165,15 @@ const styles = StyleSheet.create({
     backgroundColor: '#212842',
     borderRadius: 5,
     overflow: 'hidden',
-    width: '25%',
-    height: '5%',
+    width: 95,
+    height: 50,
     justifyContent: 'center',
     alignItems: 'center',
-    marginBottom: "20%"
+  },
+
+  campoBotao: {
+    width: '90%',
+    alignItems: 'center',
+    marginBottom: 50,
   },
 })
